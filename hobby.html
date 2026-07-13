@@ -48,36 +48,67 @@
 </head>
 <body class="bg-cream-50 min-h-screen flex flex-col justify-between pt-24">
 
-    <!-- [NAVBAR] 모든 페이지에 공통 적용되는 네비게이션 바 (오류 수정 완료) -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-cream-200 py-4 px-6 flex justify-between items-center shadow-sm transition-all duration-300">
-        <a href="index.html" class="text-lg font-black text-orange-500 tracking-tight flex items-center gap-1.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse"></span>
-            Sumin.SIM
+  <!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-cream-200 py-4 px-6 flex justify-between items-center shadow-sm transition-all duration-300">
+
+    <!-- Logo -->
+    <a href="index.html" class="text-lg font-black text-orange-500 tracking-tight flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse"></span>
+        Sumin.SIM
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+        <a href="index.html" class="text-gray-500 hover:text-orange-500 transition-all">
+            홈
         </a>
-        
-        <!-- 데스크톱 네비게이션 메뉴 -->
-        <div class="hidden md:flex space-x-6 text-sm font-semibold">
-            <a href="index.html" class="text-gray-500 hover:text-orange-500 transition-all">홈</a>
-            <a href="about.html" class="text-gray-500 hover:text-orange-500 transition-all">소개 & 키워드</a>
-            <a href="hobby.html" class="text-orange-500 border-b-2 border-orange-500 pb-1 transition-all">취미</a>
-            <a href="guestbook.html".html" class="text-orange-500 border-b-2 border-orange-500 pb-1 transition-all">방명록</a>
-        </div>
 
-        <!-- 모바일 햄버거 메뉴 버튼 (JS 에러 방지용으로 추가) -->
-        <button id="menu-btn" class="md:hidden text-charcoal hover:text-orange-500 focus:outline-none" aria-label="메뉴 열기">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
+        <a href="about.html" class="text-gray-500 hover:text-orange-500 transition-all">
+            소개 & 키워드
+        </a>
 
-        <!-- 모바일 드롭다운 메뉴 (JS 에러 방지용으로 추가) -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-cream-200 py-4 px-6 flex flex-col space-y-3 shadow-md md:hidden">
-            <a href="index.html" class="mobile-link text-gray-600 hover:text-orange-500 font-semibold text-sm">홈</a>
-            <a href="about.html" class="mobile-link text-gray-600 hover:text-orange-500 font-semibold text-sm">소개 & 키워드</a>
-            <a href="hobby.html" class="mobile-link text-orange-500 font-semibold text-sm">취미</a>
-            <a href="guestbook.html" class="mobile-link text-orange-500 font-semibold text-sm">방명록</a>
-        </div>
-        </div>
-    </nav>
+        <a href="hobby.html" class="text-orange-500 border-b-2 border-orange-500 pb-1">
+            취미
+        </a>
 
+        <a href="guestbook.html" class="text-gray-500 hover:text-orange-500 transition-all">
+            방명록
+        </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn"
+        class="md:hidden text-charcoal hover:text-orange-500"
+        aria-label="메뉴 열기">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-white border-b border-cream-200 py-4 px-6 flex flex-col space-y-3 shadow-md md:hidden">
+
+        <a href="index.html"
+            class="mobile-link text-gray-600 hover:text-orange-500 font-semibold">
+            홈
+        </a>
+
+        <a href="about.html"
+            class="mobile-link text-gray-600 hover:text-orange-500 font-semibold">
+            소개 & 키워드
+        </a>
+
+        <a href="hobby.html"
+            class="mobile-link text-orange-500 font-semibold">
+            취미
+        </a>
+
+        <a href="guestbook.html"
+            class="mobile-link text-gray-600 hover:text-orange-500 font-semibold">
+            방명록
+        </a>
+    </div>
+
+</nav>
     <!-- Main Content Grid -->
     <main class="max-w-4xl mx-auto px-6 py-8 space-y-12">
         
